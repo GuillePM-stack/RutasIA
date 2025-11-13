@@ -1,0 +1,4 @@
+,distance_m,distance_m,expanded_nodes,expanded_nodes,computation_time_ms,computation_time_ms
+,mean,sum,mean,sum,mean,sum
+algorithm,,,,,,
+A*,295.45,19500,36.0,2376,0.06,3.86

@@ -1,0 +1,7 @@
+method,speed_km_h,total_distance_m,total_time_min,expanded_nodes,path_length,computation_time_ms,path,timestamp
+Nearest Neighbor,24,1600,4.0,6,8,1.4569759368896484,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.989036
+Fixed Order,24,1600,4.0,0,8,0.04863739013671875,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.989216
+Nearest Neighbor,30,1600,3.2,6,8,1.3642311096191406,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.990890
+Fixed Order,30,1600,3.2,0,8,0.016689300537109375,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.991041
+Nearest Neighbor,36,1600,2.666666666666667,6,8,1.4872550964355469,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.992886
+Fixed Order,36,1600,2.666666666666667,0,8,0.013828277587890625,depot -> P4 -> P3 -> P2 -> P1 -> P5 -> P6 -> depot,2025-11-13 02:45:02.993044

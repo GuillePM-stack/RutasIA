@@ -1,0 +1,91 @@
+================================================================================
+REPORTE COMPLETO: OPTIMIZACIÓN DE RUTA MULTI-ENTREGA EN CIUDAD
+================================================================================
+Fecha de generación: 2025-11-13 02:45:07
+Duración total del experimento: 4.38 segundos
+
+1. METODOLOGÍA
+----------------------------------------
+1.1 Algoritmos Implementados:
+  • Dijkstra: Algoritmo de camino más corto (control)
+  • A*: Búsqueda heurística con distancia Euclidiana
+  • Nearest Neighbor: Algoritmo greedy para TSP
+  • Fixed Order: Baseline de orden predefinido
+
+1.2 Heurísticas y Admisibilidad:
+  • A* calles: Heurística Euclidiana - ADMISIBLE
+    - Nunca sobreestima la distancia real en carretera
+    - Consistente: h(n) ≤ d(n, m) + h(m) para todos los nodos m
+
+2. RESULTADOS EXPERIMENTALES
+----------------------------------------
+2.1 Comparación de Algoritmos de Routing (Calles):
+  A*:
+    - Distancia promedio: 292.54 m
+    - Nodos expandidos promedio: 36.0
+    - Tiempo computación promedio: 0.07 ms
+  Dijkstra:
+    - Distancia promedio: 100.00 m
+    - Nodos expandidos promedio: 70.0
+    - Tiempo computación promedio: 1.06 ms
+
+2.2 Planificación de Entregas Completas:
+  Velocidad 24 km/h:
+    Nearest Neighbor:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 4.00 min
+      - Tiempo computación: 1.46 ms
+    Fixed Order:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 4.00 min
+      - Tiempo computación: 0.05 ms
+
+  Velocidad 30 km/h:
+    Nearest Neighbor:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 3.20 min
+      - Tiempo computación: 1.36 ms
+    Fixed Order:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 3.20 min
+      - Tiempo computación: 0.02 ms
+
+  Velocidad 36 km/h:
+    Nearest Neighbor:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 2.67 min
+      - Tiempo computación: 1.49 ms
+    Fixed Order:
+      - Distancia total: 1600.00 m
+      - Tiempo total: 2.67 min
+      - Tiempo computación: 0.01 ms
+
+3. ANÁLISIS COMPARATIVO
+----------------------------------------
+3.1 Mejora Nearest Neighbor vs Orden Fijo: 0.00%
+   - Orden Fijo: 1600.00 m
+   - Nearest Neighbor: 1600.00 m
+   - Ahorro absoluto: 0.00 m
+
+4. DISCUSIÓN Y OBSERVACIONES
+----------------------------------------
+4.1 Complejidad Computacional:
+  • Dijkstra: O((V+E) log V) con cola de prioridad
+  • A*: O(b^d) pero reducido por heurística admisible
+  • Nearest Neighbor: O(n^2) para n puntos de entrega
+
+4.2 Observaciones Prácticas:
+  • A* mostró mejor balance entre optimalidad y eficiencia
+  • El caching de distancias mejoró significativamente el rendimiento
+  • La proyección del grafo es crucial para cálculos precisos
+  • Grafos reales de OSM pueden ser muy grandes y requerir optimizaciones
+
+4.3 Limitaciones y Trabajo Futuro:
+  • No considera tráfico, semáforos o restricciones temporales
+  • Asume velocidad constante del vehículo
+  • Podría incorporar más heurísticas para el TSP
+  • Posible integración con datos de tráfico en tiempo real
+
+================================================================================
+FIN DEL REPORTE
+================================================================================

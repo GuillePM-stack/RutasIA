@@ -1,0 +1,5 @@
+category,algorithm,avg_distance_m,total_expanded_nodes,avg_computation_time_ms,samples,avg_total_distance_m,avg_total_time_min
+street_routing,Dijkstra,100.0,70.0,1.0552406311035156,1,,
+street_routing,A*,292.53731343283584,2412.0,0.06563272049177939,67,,
+delivery_planning,Nearest Neighbor,,,1.436154047648112,3,1600.0,3.288888888888889
+delivery_planning,Fixed Order,,,0.026384989420572918,3,1600.0,3.288888888888889
